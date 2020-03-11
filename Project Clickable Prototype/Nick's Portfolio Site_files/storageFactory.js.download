@@ -1,0 +1,15 @@
+myApp.factory('storageFactory', function($http, $state){
+  factory = {};
+
+  factory.sendMail = function(mail, callback){
+    $http.post('/contactForm', mail).success(function(res){
+      if(res.status == 'error'){
+        console.log("error in sending mail");
+      }else{
+        callback(res);
+      }
+    })
+  };
+
+  return factory;
+})

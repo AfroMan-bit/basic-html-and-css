@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://nicks-portfolio.herokuapp.com/ -->
+<html ng-app="myApp" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style><style type="text/css">.uib-time input{width:50px;}</style><style type="text/css">[uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style><style type="text/css">.uib-datepicker-popup.dropdown-menu{display:block;float:none;margin:0;}.uib-button-bar{padding:10px 9px 2px;}</style><style type="text/css">.uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute !important;top:-9999px !important;width:50px !important;height:50px !important;overflow:scroll !important;}.uib-position-body-scrollbar-measure{overflow:scroll !important;}</style><style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-left,.uib-right{width:100%}</style><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    <!--<base href="/">--><base href=".">
+    <title>Nick's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ANGULARS -->
+    <script src="./jquery.min.js.download"></script>
+    <script src="./angular.js.download"></script>
+    <!-- <script src="./bower_components/angular/angular.min.js"></script> -->
+    <script src="./angular-animate.js.download"></script>
+    <script src="./angular-sanitize.js.download"></script>
+    <!-- Bootstrap latest css-->
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <!-- Ui router and app instatiation -->
+    <script src="./app.js.download"></script>
+    <!-- Factories -->
+    <script src="./storageFactory.js.download"></script>
+    <!-- Controllers -->
+    <script src="./mainController.js.download"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./main.css" media="screen" charset="utf-8">
+    <!-- Bower Components -->
+    <script src="./ui-bootstrap-tpls.min.js.download"></script>
+    <script src="./angular-ui-router.js.download"></script>
+    <script src="./ui-navbar.js.download"></script>
+    <link rel="stylesheet" href="./ui-navbar.css" media="screen" charset="utf-8">
+    <script src="./jcs-auto-validate.js.download"></script>
+    <script src="./angular-scroll.min.js.download"></script>
+    <script src="./angular-parallax.min.js.download"></script>
+    <script src="./full_page.js.download"></script>
+    <link rel="stylesheet" href="./animate.min.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="./hover.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="./angular-bootstrap-lightbox.css" media="screen" charset="utf-8">
+    <script src="./angular-bootstrap-lightbox.js.download"></script>
+    <script src="./angulargrid.js.download"></script><style>.ag-no-transition{-webkit-transition: none !important;transition: none !important;} .angular-grid{position : relative;} .angular-grid > *{opacity : 0} .angular-grid > .angular-grid-item{opacity : 1}</style>
+    <script src="./ngToast.min.js.download"></script>
+    <link rel="stylesheet" href="./ngToast-animations.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="./ngToast.css" media="screen" charset="utf-8">
+
+    <!-- Other addons -->
+    <link href="./css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./font-awesome.min.css">
+  </head>
+  <body>
+    <div ng-controller="mainController" scroll-hide="" class="ng-scope">
+      <nav data-ng-class="{&#39;navee&#39;: startMe}" class="navbar  navbar-fixed-top navee" role="navigation">
+
+        <!-- Responsive NavBar -->
+
+        <div class="navbar-header">
+          <h2 class="pull-left navbar-toggle" style="color: white;" ng-init="navCollapsed = true">Navigate Me</h2>
+          <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <i style="color: white;" class="fa fa-bars fa-2x"></i>
+          </button>
+        </div>
+
+        <!-- Responsive Navbar End -->
+
+        <div class="collapse navbar-collapse" ng-class="!navCollapsed &amp;&amp; &#39;in&#39;">
+          <div class="container-fluid">
+
+            <ul class="nav navbar-nav navbar-left">
+              <li class="hvr-underline-from-left"><a href="https://nicks-portfolio.herokuapp.com/#top" du-smooth-scroll=""><span class="extend">N</span><span class="extend">G</span></a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li class="hvr-underline-from-center"><a href="https://nicks-portfolio.herokuapp.com/#who" du-smooth-scroll="">About</a></li>
+              <li class="hvr-underline-from-center"><a href="https://nicks-portfolio.herokuapp.com/#skills" du-smooth-scroll="">Skills</a></li>
+              <li class="hvr-underline-from-center"><a href="https://nicks-portfolio.herokuapp.com/#myWork" du-smooth-scroll="">My Work</a></li>
+              <li class="hvr-underline-from-center"><a href="https://nicks-portfolio.herokuapp.com/#contact" du-smooth-scroll="">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+    <!-- uiView:  --><div ui-view="" class="ng-scope"><div id="top" class="container-fluid ng-scope">
+  <div scroll-hide="" class="row ng-scope" fullpage-scroll="top" ng-controller="mainController" style="height: 576px;">
+    <div class="col-md-12 first_segment">
+      <div id="large-header" class="large-header" style="height: 576px;">
+        <span class="main-title">
+          <img style="width:50%; height:50%;" src="./brain.svg" alt="">
+          <h1>Full Stack Web Developer</h1>
+          <h1 id="titleName"><b><span class="key">N</span>ECHOLAS <span class="key">G</span>OMEZ</b></h1>
+        </span>
+				<canvas id="sectionOne" width="1366" height="576"></canvas>
+			</div>
+    </div>
+  </div>
+
+  <div class="row ng-scope" ng-controller="mainController" fullpage-scroll="scroll" style="margin-top: 576px;">
+
+    <div id="who" class="col-md-12 infoFirst">
+      <div class="col-md-5 col-md-offset-1">
+        <h1 style="font-size:4em;">About Me</h1>
+        <h3 style="color:grey;">I'm a finance major turned coder!</h3>
+        <p>I am a <span class="key">highly motivated web developer</span> with a passion for learning new technologies that continues to grow everyday.  I have traveled the world and back, served in the military and have held positions in management, accounting, administration and even firefighting, but none of those occupations can come close to my love for coding.  <span class="key">Developing web applications</span> and watching as they grow and provide use to users is a great feeling which I have come to appreciate and hope to continue.</p>
+      </div>
+
+      <div class="col-md-5 col-md-offset-1 ">
+        <img class="frame img-responsive" style="width:400px; " src="./profilePic.jpg" alt="">
+      </div>
+
+      <div class="col-md-12">
+        <div class="col-md-1 col-md-offset-5">
+          <a href="https://nicks-portfolio.herokuapp.com/#skills" du-smooth-scroll=""><i id="navArrow" class="fa fa-chevron-down fa-4x animated pulse picar"></i></a>
+        </div>
+        <div class="col-md-5">
+          <div class="col-md-6 test text-center">
+            <h2>I debug in ...</h2>
+          </div>
+          <div class="col-md-6 test text-left">
+            <h3 id="mine" class="animated bounceIn ng-binding"> JavaScript - console.log()</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="phoneSize">
+        <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12 thumbNails">
+          <!-- ngRepeat: image in album --><div class="col-md-3 col-sm-3 col-xs-3 text-center ng-scope" ng-repeat="image in album">
+           <img class="hvr-grow-shadow" ng-src="../../static/images/MiaWorking_tn.jpg" ng-click="open($index)" src="./MiaWorking_tn.jpg">
+          </div><!-- end ngRepeat: image in album --><div class="col-md-3 col-sm-3 col-xs-3 text-center ng-scope" ng-repeat="image in album">
+           <img class="hvr-grow-shadow" ng-src="../../static/images/dadIAtGame_tn.jpg" ng-click="open($index)" src="./dadIAtGame_tn.jpg">
+          </div><!-- end ngRepeat: image in album --><div class="col-md-3 col-sm-3 col-xs-3 text-center ng-scope" ng-repeat="image in album">
+           <img class="hvr-grow-shadow" ng-src="../../static/images/meAndKelly_tn.jpg" ng-click="open($index)" src="./meAndKelly_tn.jpg">
+          </div><!-- end ngRepeat: image in album --><div class="col-md-3 col-sm-3 col-xs-3 text-center ng-scope" ng-repeat="image in album">
+           <img class="hvr-grow-shadow" ng-src="../../static/images/weapon_tn.jpg" ng-click="open($index)" src="./weapon_tn.jpg">
+          </div><!-- end ngRepeat: image in album -->
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="col-md-12 image">
+      <img class="onImage ng-isolate-scope" src="./desk.jpg" du-parallax="" y="background" style="transform: translate3d(0px, -361px, 0px); opacity: 1;">
+    </div>
+
+    <div id="skills" class="col-md-12 infoMid">
+
+      <div class="col-md-8 col-md-offset-1">
+        <h1 style="font-size:4em;">Skills to pay the Bills</h1>
+        <h4 style="color:grey;">These are some of the technologies that im familiar with.</h4>
+        <p>I have a passion for learning and will continue to add more technologies to this list. (currently learning React/Redux!!)</p>
+      </div>
+
+      <div class="phoneSize">
+        <div class="col-md-10 col-md-offset-1 col-xs-12">
+          <div class="col-md-12 col-xs-12 icons">
+            <ul class="dynamic-grid ng-isolate-scope angular-grid" angular-grid="combined" ag-grid-width="150" ag-gutter-size="0" ag-refresh-on-img-load="true" style="height: 748px;">
+                <!-- ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 0px; left: 0px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/jquery.png" class="grid-img img-loaded" src="./jquery.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 0px; left: 174px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/bootstrap.png" class="grid-img img-loaded" src="./bootstrap.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 0px; left: 348px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/materialize.png" class="grid-img img-loaded" src="./materialize.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 0px; left: 522px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/html5.png" class="grid-img img-loaded" src="./html5.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 0px; left: 696px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/angularjs.png" class="grid-img img-loaded" src="./angularjs.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 0px; left: 870px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/python.png" class="grid-img img-loaded" src="./python.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 100px; left: 348px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/PHP.png" class="grid-img img-loaded" src="./PHP.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 145px; left: 174px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/django.png" class="grid-img img-loaded" src="./django.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 174px; left: 0px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/Codeigniter.png" class="grid-img img-loaded" src="./Codeigniter.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 174px; left: 522px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/flask.png" class="grid-img img-loaded" src="./flask.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 174px; left: 696px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/mysql.png" class="grid-img img-loaded" src="./mysql.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 174px; left: 870px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/SQLite.png" class="grid-img img-loaded" src="./SQLite.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 220px; left: 348px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/mongodb.png" class="grid-img img-loaded" src="./mongodb.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 256px; left: 870px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/nodejs.png" class="grid-img img-loaded" src="./nodejs.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 319px; left: 174px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/aws.png" class="grid-img img-loaded" src="./aws.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 330px; left: 0px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/apache.png" class="grid-img img-loaded" src="./apache.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 330px; left: 522px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/atom.png" class="grid-img img-loaded" src="./atom.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 348px; left: 696px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/sublime.png" class="grid-img img-loaded" src="./sublime.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 365px; left: 348px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/yeoman.png" class="grid-img img-loaded" src="./yeoman.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 428px; left: 0px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/Octocat.png" class="grid-img img-loaded" src="./Octocat.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 430px; left: 870px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/Bower.png" class="grid-img img-loaded" src="./Bower.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 493px; left: 174px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/reactjs.png" class="grid-img img-loaded" src="./reactjs.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 504px; left: 522px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/webpack.png" class="grid-img img-loaded" src="./webpack.png">
+                </li><!-- end ngRepeat: pic in combined --><li data-ng-repeat="pic in combined" class="grid ng-scope angular-grid-item img-loaded" style="width: 174px; position: absolute; top: 522px; left: 696px;">
+                   <img ng-src="https://s3-us-west-2.amazonaws.com/myportfoliopicks/redux.png" class="grid-img img-loaded" src="./redux.png">
+                </li><!-- end ngRepeat: pic in combined -->
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="col-md-12 image">
+      <img class="onImage ng-isolate-scope" src="./angularMin.png" du-parallax="" y="background" style="transform: translate3d(0px, -763px, 0px); opacity: 1;">
+    </div>
+
+    <div id="myWork" class="col-md-12 infoMid">
+
+      <div class="col-md-8 col-md-offset-1">
+        <h1 style="font-size:4em;">Some of my Projects</h1>
+        <h4 style="color:grey;">Take a look at some of my AWeSOME projects!</h4>
+        <p>I love seeing the end results of working APPs; Such a great feeling of accomplishment. </p>
+      </div>
+      <div class="col-md-12">
+        <h3 class="text-center">Check out <a target="_blank" href="http://www.angelsforbrazil.org/">Angels for Brazil</a>, a live Angular site I built and deployed for a non-profit organization.</h3>
+      </div>
+
+      <div class="col-md-12 port">
+
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 proj">
+            <div class="hovereffect">
+                <img class="img-responsive" src="./instaloud_siteR.png" alt="">
+                <div class="overlay">
+                    <h2>InstaLoud</h2>
+                    <span class="info">
+                      <h2><a target="_blank" href="http://instaloud.necholasgomez.com/">InstaLoud</a></h2>
+                      <h2><a target="_blank" href="https://github.com/necholasg/InstaLoud">GitHub - InstaLoud</a></h2>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 proj">
+            <div class="hovereffect">
+                <img class="img-responsive" src="./nonProfit_siteR.png" alt="">
+                <div class="overlay">
+                    <h2>Angels</h2>
+                    <span class="info">
+                      <h2><a target="_blank" href="http://nonprofit.necholasgomez.com/">Angels</a></h2>
+                      <h2><a target="_blank" href="https://github.com/necholasg/NonProfitTemplate">GitHub - Non-Profit Template</a></h2>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-12 port">
+
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 proj">
+            <div class="hovereffect">
+                <img class="img-responsive" src="./SOC_siteR.png" alt="">
+                <div class="overlay">
+                    <h2>Stay On Course</h2>
+                    <span class="info">
+                      <h2><a target="_blank" href="http://soc.necholasgomez.com/">Stay on Course</a></h2>
+                      <h2><a target="_blank" href="https://github.com/necholasg/Stay-On-Course">GitHub - SOC</a></h2>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 proj">
+            <div class="hovereffect">
+                <img class="img-responsive" src="./Modulo_siteR.png" alt="">
+                <div class="overlay">
+                    <h2>Modulo</h2>
+                    <span class="info">
+                      <h2><a target="_blank" href="http://modulo.necholasgomez.com/">Modulo</a></h2>
+                      <h2><a target="_blank" href="https://github.com/necholasg/modulo">GitHub - Modulo</a></h2>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-md-12 image">
+      <img class="onImage ng-isolate-scope" src="./bye.jpg" du-parallax="" y="background" style="transform: translate3d(0px, -1446px, 0px); opacity: 1;">
+    </div>
+
+    <div id="contact" class="col-md-12 infoLast">
+      <div class="col-md-7 col-md-offset-1">
+        <h1 style="font-size:4em;">Contact Me</h1>
+      </div>
+      <div class="col-md-4 toastMe ng-toast ng-toast--center ng-toast--bottom ng-toast--animate-fade ng-toast ng-toast--center ng-toast--bottom ng-toast--animate-fade"><ul class="ng-toast__list"><!-- ngRepeat: message in messages --></ul></div>
+
+
+      <div class="col-md-4 col-md-offset-1">
+        <div class="col-md-12 icons">
+          <h5><a target="_blank" href="https://www.facebook.com/necholas.gomez"><i class="fa fa-facebook-square fa-4x"></i></a> Like me on "the" Facebook</h5>
+          <p><a target="_blank" href="https://www.linkedin.com/in/necholas-gomez-23055313"><i class="fa fa-linkedin-square fa-4x"></i></a> Connect on Linked In</p>
+          <p><a target="_blank" href="https://github.com/necholasg"><i class="fa fa-github-square fa-4x"></i></a> See me on GitHub</p>
+          <p><a ng-click="openThis(&#39;lg&#39;)"><i class="fa fa-file-text-o fa-4x"></i></a> Read my Resume</p>
+          <a href="https://nicks-portfolio.herokuapp.com/#top" du-smooth-scroll=""><button style="margin-top:100px;" type="button" class="btn btn-danger">Back to Top</button></a>
+        </div>
+        <script type="text/ng-template" id="myModalContent.html">
+          <div class="modal-header">
+            <h3 class="modal-title">Resume - Necholas Gomez</h3>
+          </div>
+          <div class="modal-body">
+            <div style="text-align: center;">
+            <iframe  src="https://docs.google.com/gview?url=https://s3-us-west-2.amazonaws.com/myportfoliopicks/NGomez_Resume.pdf&embedded=true"
+            style="width:45vw; height:45vh;" frameborder="0"></iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-warning" type="button" ng-click="closeMe()">Close</button>
+          </div>
+        </script>
+
+      </div>
+
+      <div class="col-md-6">
+        <form name="mail" style="margin-top:50px;" ng-click="mailForm()" ng-submit="sendMail()" novalidate="" class="ng-pristine ng-invalid ng-invalid-required ng-valid-email">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" ng-model="mailData.name" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" id="name" required="required">
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" ng-model="mailData.email" class="form-control ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required" id="email" required="required">
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" ng-model="mailData.message" id="message" name="message" rows="8" cols="40" required="required"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary pull-right" name="button">Send</button>
+
+        </form>
+
+      </div>
+      <div class="ng-toast ng-toast--center ng-toast--bottom ng-toast--animate-fade"><ul class="ng-toast__list"><!-- ngRepeat: message in messages --></ul></div>
+    </div>
+  </div>
+</div>
+<script src="./TweenLite.min.js.download" class="ng-scope"></script>
+<script src="./EasePack.min.js.download" class="ng-scope"></script>
+<script src="./rAF.js.download" class="ng-scope"></script>
+<script src="./starLine.js.download" class="ng-scope"></script>
+</div>
+  
+
+<style>.glyphicon-spin-jcs {-webkit-animation: spin 1000ms infinite linear;animation: spin 1000ms infinite linear;}@-webkit-keyframes spin {0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}100% {-webkit-transform: rotate(359deg);transform: rotate(359deg);}}@keyframes spin {0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}100% {-webkit-transform: rotate(359deg);transform: rotate(359deg);}}</style></body></html>

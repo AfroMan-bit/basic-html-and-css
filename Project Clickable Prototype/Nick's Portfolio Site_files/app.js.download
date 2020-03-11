@@ -1,0 +1,61 @@
+var myApp = angular.module('myApp', ['ui.bootstrap', 'ui.router', 'ui.navbar', 'jcs-autoValidate', 'duScroll', 'duParallax', 'FullpageScroll', 'bootstrapLightbox','angularGrid', 'ngToast', 'ngSanitize'])
+.value('duScrollDuration', 1500).value('duScrollCancelOnEvents', false);
+
+
+myApp.config(['ngToastProvider', function(ngToast) {
+    ngToast.configure({
+      animation: 'fade',
+      verticalPosition: 'bottom',
+      horizontalPosition: 'center',
+      maxNumber: 1
+    });
+}]);
+
+myApp.directive("scrollHide", function ($window) {
+   return function(scope, element, attrs) {
+       angular.element($window).bind("scroll", function() {
+
+            if (this.scrollY >= $window.innerHeight/2){
+              scope.startMe = true; //show nav background
+            }else{
+              scope.startMe = false;
+            }
+           scope.$apply();
+       });
+   };
+});
+
+myApp.run(function(defaultErrorMessageResolver){
+  defaultErrorMessageResolver.getErrorMessages().then(function(errorMessages){
+    errorMessages['badName'] = 'Name must only contain Alpha characters.';
+    });
+  }
+);
+
+myApp.config(function ($locationProvider, $stateProvider, $urlRouterProvider) {
+
+  $urlRouterProvider.otherwise('/');
+
+  $stateProvider
+
+    .state('index',{
+        url: '/',
+        templateUrl: 'static/partials/main.html'
+    });
+    // use the HTML5 History API
+    $locationProvider.html5Mode(true);
+
+// ---------------Example Route--------------------------
+
+    // .state('admin',{
+    //     url: '/admin',
+    //     templateUrl: 'static/partials/admin.html',
+    //     controller: 'authCtrl',
+    //     onEnter: function($state, auth){
+    //       if(auth.isLoggedIn()){
+    //         $state.go('admin2');
+    //       }
+    //     }
+    // })
+
+});

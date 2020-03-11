@@ -1,0 +1,108 @@
+myApp.controller('mainController', function($scope, $uibModal, $window, storageFactory, parallaxHelper, $timeout, angularGridInstance, $document, ngToast, Lightbox){
+
+  $scope.helmetShow = true;
+  $scope.show = true; //removed
+  $scope.edit = true;
+  $scope.startMe = false;
+  $scope.arrow = true;
+  $scope.background = parallaxHelper.createAnimator(-0.3);
+
+  $scope.mailForm = function(){
+    $timeout(function(){$scope.resetForm();},1500);
+  }
+  $scope.resetForm = function(){
+    $scope.mail.$setPristine();
+  }
+
+  $scope.combined = ['jquery.png', 'bootstrap.png', 'materialize.png', 'html5.png', 'angularjs.png', 'python.png','PHP.png', 'django.png', 'Codeigniter.png', 'flask.png', 'mysql.png', 'SQLite.png', 'mongodb.png', 'nodejs.png', 'aws.png', 'apache.png', 'atom.png', 'sublime.png', 'yeoman.png', 'Octocat.png', 'Bower.png', 'reactjs.png', 'webpack.png', 'redux.png'];
+
+  $scope.num = 0;
+  $scope.people = ['PHP - var_dump()','Python - print','JavaScript - console.log()', 'AngularJS - $scope', 'React - state'];
+  $scope.counter = $scope.people[$scope.num];
+
+  $scope.onTimeout = function(){
+    if($scope.num == 4){
+      $scope.num = -1;
+    }
+      $scope.num++;
+      $scope.counter = $scope.people[$scope.num];
+      mytimeout = $timeout($scope.onTimeout,3000);
+  }
+  var mytimeout = $timeout($scope.onTimeout,3000);
+
+  // $scope.$watch('myWidth', function() {
+  //   console.log($scope.myWidth);;
+  //   });
+
+
+  $scope.arrowTime = function(){
+    $scope.arrow = false;
+  }
+  $timeout(function(){$scope.arrowTime();},4000);
+
+  //list available lightbox default options
+   $scope.options = {
+     fadeDuration : 0.7,
+     resizeDuration : 0.5,
+     fitImageInViewPort : true,
+     positionFromTop : 50,
+     showImageNumberLabel : false,
+     alwaysShowNavOnTouchDevices :false,
+     wrapAround : false
+   };
+
+   $scope.album = [
+    {
+      'url' : '../../static/images/MiaWorking.JPG',
+      'caption' : 'I got my dog to work for me!!!',
+      'thumbUrl' : '../../static/images/MiaWorking_tn.jpg'
+    },
+    {
+     'url' : '../../static/images/dadIAtGame.JPG',
+     'caption' : 'Go Niners!',
+     'thumbUrl' : '../../static/images/dadIAtGame_tn.jpg'
+    },
+    {
+     'url' : '../../static/images/meAndKelly.JPG',
+     'caption' : 'A Day at the Beach.',
+     'thumbUrl' : '../../static/images/meAndKelly_tn.jpg'
+    },
+    {
+     'url' : '../../static/images/weapon.JPG',
+     'caption' : 'Weapon of Choice!',
+     'thumbUrl' : '../../static/images/weapon_tn.jpg'
+   }
+  ];
+
+   $scope.open = function($index){
+     Lightbox.openModal($scope.album, $index, $scope.options);
+   }
+
+   $scope.openThis = function (size) {
+
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'myModalContent.html',
+      controller: 'ModalInstanceCtrl',
+      size: size
+    });
+  };
+
+   $scope.sendMail = function(){
+     storageFactory.sendMail($scope.mailData, function(data){
+        console.log(data);
+       $scope.mailData = {};
+       ngToast.create({
+          className: 'success',
+          content: '<a>Your Message has been sent!</a>'
+        });
+     })
+   }
+});
+
+myApp.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance) {
+
+  $scope.closeMe = function () {
+    $uibModalInstance.dismiss('cancel');
+  };
+});
